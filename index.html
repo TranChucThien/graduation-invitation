@@ -7,7 +7,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { overflow: hidden; font-family: 'Arial', sans-serif; }
+        body { overflow: hidden; font-family: 'Times New Roman', serif; }
         
         /* Ocean Blue Theme */
         .bg-gradient-primary { background: #88c1e3; }
@@ -16,9 +16,9 @@
         .text-secondary { color: #ffffff; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); }
         .text-accent { color: #ffffff; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); }
         .text-highlight { color: #ffffff; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); }
-        .card-bg { background: rgba(1, 39, 45, 0.3); }
-        .countdown-bg { background: rgba(88, 178, 223, 0.4); }
-        .message-bg { background: rgba(88, 178, 223, 0.2); }
+        .card-bg { background: rgba(1, 39, 45, 0.36); }
+        .countdown-bg { background: rgba(88, 178, 223, 0.48); }
+        .message-bg { background: rgba(88, 178, 223, 0.24); }
         .border-blue { border-color: rgba(1, 39, 45, 0.3); }
         
         .scene {
@@ -78,7 +78,7 @@
         @keyframes pulse { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
         
         .text-6xl { font-size: 3.75rem; line-height: 1; }
-        .text-5xl { font-size: 3rem; line-height: 1; }
+        .text-5xl { font-size: 2.7rem; line-height: 1; }
         .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
         .text-2xl { font-size: 1.5rem; line-height: 2rem; }
         .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
@@ -212,7 +212,7 @@
         <div class="text-6xl mb-6 animate-bounce">🎓</div>
         <h1 class="text-3xl font-bold mb-6">Đang chuẩn bị lễ tốt nghiệp...</h1>
         <div class="loading-spinner mb-4"></div>
-        <p class="text-xl opacity-80">Trần Chức Thiện</p>
+        <p class="text-xl font-extrabold" style="color: #ffd700;">Trần Chức Thiện</p>
     </div>
 
     <!-- Music Player -->
@@ -222,8 +222,8 @@
     </div>
     
     <audio id="backgroundMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
         <source src="https://www.bensound.com/bensound-music/bensound-happyrock.mp3" type="audio/mpeg">
-        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
     </audio>
 
     <div class="scene-indicator">
@@ -244,9 +244,9 @@
         <div class="text-center p-8 relative z-10">
             <img src="https://raw.githubusercontent.com/TranChucThien/graduation-invitation/main/IMG_3217.JPG" 
                  alt="Graduate photo" class="w-40 h-40 rounded-full mx-auto mb-6 border-8 border-gold shadow-2xl">
-            <p class="text-2xl mb-4 font-light text-primary">Thân mời <span id="guest-name" class="text-primary">bạn</span> đến với,</p>
+            <p class="text-2xl mb-4 font-light text-primary">Thân mời <span id="guest-name" class="font-extrabold" style="color: #ffd700; text-shadow: 3px 3px 6px rgba(0,0,0,0.9); font-size: 1.75rem;">bạn</span> đến với,</p>
             <h1 class="text-5xl font-extrabold tracking-tight main-title mb-4">LỄ TỐT NGHIỆP TÂN CỬ NHÂN</h1>
-            <p class="text-2xl mt-4 font-semibold text-accent">Trần Chức Thiện</p>
+            <p class="text-3xl mt-4 font-extrabold" style="color: #ffd700; text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">Trần Chức Thiện</p>
         </div>
     </div>
 
@@ -260,8 +260,8 @@
             <div class="max-w-xl mx-auto">
                 <!-- Header -->
                 <div class="text-center mb-8">
-                    <h2 class="text-4xl font-extrabold mb-4 text-primary whitespace-nowrap main-title">🎓 Lễ Tốt Nghiệp 🎓</h2>
-                    <p class="text-xl text-secondary font-semibold">Trần Chức Thiện</p>
+                    <h2 class="text-4xl font-extrabold mb-4 text-primary main-title whitespace-nowrap">🎓 LỄ TỐT NGHIỆP 🎓</h2>
+                    <p class="text-2xl font-extrabold" style="color: #ffd700; text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">Trần Chức Thiện</p>
                     
                 </div>
 
@@ -294,7 +294,7 @@
                 </div>
 
                 <!-- Countdown -->
-                <div class="text-center mb-6">
+                <div class="card-bg p-4 rounded-xl border border-blue mb-6 text-center">
                     <p class="text-primary font-bold mb-3">⏳ Đếm ngược</p>
                     <div class="flex justify-center space-x-2">
                         <div class="countdown-bg px-2 py-3 rounded-lg border border-blue text-center">
@@ -327,7 +327,7 @@
                 </div>
 
                 <!-- Message -->
-                <div class="message-bg p-4 rounded-xl border border-blue text-center">
+                <div class="card-bg p-4 rounded-xl border border-blue text-center">
                     <!-- <p class="text-xs italic text-secondary leading-relaxed">
                         "Kỉ niệm sẽ là thứ duy nhất đi theo ta cả một đời dài - Đen Vâu"
                     </p> -->
